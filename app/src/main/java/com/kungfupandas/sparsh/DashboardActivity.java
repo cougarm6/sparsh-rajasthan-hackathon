@@ -1,6 +1,7 @@
 package com.kungfupandas.sparsh;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -86,5 +87,6 @@ public class DashboardActivity extends ToolbarActivity implements CalendarView.C
 
     @Override
     public void onActiveCounterClicked() {
+        startActivity(new Intent(this, PatientListActivity.class));
     }
 }
