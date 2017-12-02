@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kungfupandas.sparsh.customui.CalendarView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:font="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/calendarView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:elevation="5dp">
+
+    <RelativeLayout
+        android:id="@+id/ll_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary">
+
+        <View
+            android:id="@+id/calendar_separator"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#80e6e6e6" />
+
+
+        <com.kungfupandas.sparsh.customui.FontTextView
+            android:id="@+id/tv_dashboard_calendar_date_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/calendar_separator"
+            android:layout_margin="10dp"
+            android:text="FRI, 18th December"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            font:fontName="proximanova-regular-webfont.ttf" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/tv_dashboard_calendar_date_today"
+            android:layout_marginBottom="20dp"
+            android:overScrollMode="never" />
+    </RelativeLayout>
+
+</com.kungfupandas.sparsh.customui.CalendarView>
